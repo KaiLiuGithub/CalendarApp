@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/sundayDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sunday"
+        android:layout_weight="1"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/mondayDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/monday"
+        android:layout_weight="1"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/tuesdayDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tuesday"
+        android:layout_weight="1"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/wednesdayDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wednesday"
+        android:layout_weight="1"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/thursdayDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/thursday"
+        android:layout_weight="1"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/fridayDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/friday"
+        android:layout_weight="1"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/saturDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/saturday"
+        android:layout_weight="1"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

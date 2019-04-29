@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_calendar"
+    app:startDestination="@id/calendarFragment">
+
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.kai.liu.calendar.view.CalendarFragment"
+        android:label="CalendarFragment">
+
+        <action
+            android:id="@+id/action_calendarFragment_to_createMemoFragment"
+            app:destination="@id/createMemoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createMemoFragment"
+        android:name="com.kai.liu.calendar.view.CreateMemoFragment"
+        android:label="CreateMemoFragment">
+
+        <action
+            android:id="@+id/action_createMemoFragment_to_calendarFragment"
+            app:destination="@id/calendarFragment" />
+    </fragment>
+</navigation>

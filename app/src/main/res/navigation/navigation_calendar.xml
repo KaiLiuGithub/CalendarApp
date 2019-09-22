@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/calendarFragment"
-        android:name="com.kai.liu.calendar.view.CalendarFragment"
+        android:name="com.kai.liu.calendar.view.calendar.CalendarFragment"
         android:label="CalendarFragment">
 
         <action
@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/createMemoFragment"
-        android:name="com.kai.liu.calendar.view.CreateMemoFragment"
+        android:name="com.kai.liu.calendar.view.calendar.CreateMemoFragment"
         android:label="CreateMemoFragment">
 
         <action

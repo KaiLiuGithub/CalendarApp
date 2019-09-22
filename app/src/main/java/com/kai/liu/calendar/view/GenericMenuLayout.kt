@@ -9,6 +9,7 @@ import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.core.content.ContextCompat.startActivity
 import com.kai.liu.calendar.R
+import com.kai.liu.calendar.view.settings.SettingsActivity
 import kotlinx.android.synthetic.main.generic_menu_layout.view.*
 
 class GenericMenuLayout(context: Context, attrs: AttributeSet): LinearLayout(context, attrs) {
@@ -17,11 +18,16 @@ class GenericMenuLayout(context: Context, attrs: AttributeSet): LinearLayout(con
         val view = inflater.inflate(R.layout.generic_menu_layout, this, true)
 
         view.shareMenuButton.setOnClickListener({
-            var shareIntent = Intent(Intent.ACTION_SEND)
+            val shareIntent = Intent(Intent.ACTION_SEND)
             shareIntent.setType("text/plain")
             shareIntent.putExtra(Intent.EXTRA_TEXT, "Sent from Liu Kai's Calendar App")
 
             startActivity(context, Intent.createChooser(shareIntent, "Share via"), null)
+        })
+
+        view.settingsMenuButton.setOnClickListener({
+            val settingsIntent = Intent(context, SettingsActivity::class.java)
+            startActivity(context, settingsIntent, null)
         })
     }
 }

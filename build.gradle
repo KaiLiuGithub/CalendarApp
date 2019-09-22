@@ -9,7 +9,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.0'
+        classpath 'com.android.tools.build:gradle:3.4.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "android.arch.navigation:navigation-safe-args-gradle-plugin:$nav_version"
 
@@ -21,11 +21,12 @@ buildscript {
         appcompat_version = '27.1.1'
         constraint_version = '3.0.0-alph3'
         lifecycle_version = '2.1.0-alpha04'
-        room_version = '2.1.0-alpha06'
+        room_version = '2.1.0'
         junit_version = '4.12'
         recyclerview_version = '1.1.0-alpha04'
         material_version = '1.0.0-rc01'
         cardview_version = '1.0.0'
+        gson_version = '2.8.2'
         runner_version = '1.0.2'
         espresso_version = '3.0.2'
     }

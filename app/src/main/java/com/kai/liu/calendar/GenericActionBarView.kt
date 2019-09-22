@@ -18,10 +18,10 @@ class GenericActionBarView(context: Context, attrs: AttributeSet): CardView(cont
 
         view.drawerMenuButton.setOnClickListener({
             genericDrawerLayout?.let {
-                if (genericDrawerLayout.isDrawerOpen(genericDrawerLayout)) {
-                    genericDrawerLayout.closeDrawer(genericDrawerLayout)
+                if (genericDrawerLayout.isDrawerOpen(GravityCompat.START)) {
+                    genericDrawerLayout.closeDrawer(GravityCompat.START)
                 } else {
-                    genericDrawerLayout.openDrawer(genericDrawerLayout)
+                    genericDrawerLayout.openDrawer(GravityCompat.START)
                 }
             }
         })

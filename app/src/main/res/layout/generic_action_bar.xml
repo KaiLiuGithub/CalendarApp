@@ -51,13 +51,14 @@
         </androidx.appcompat.widget.Toolbar>
     </androidx.cardview.widget.CardView>
 
-
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/menuNavigation"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        app:menu="@menu/generic_menu">
+        android:layout_gravity="start">
 
-
+        <com.kai.liu.calendar.view.GenericMenuLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
     </com.google.android.material.navigation.NavigationView>
 </androidx.drawerlayout.widget.DrawerLayout>

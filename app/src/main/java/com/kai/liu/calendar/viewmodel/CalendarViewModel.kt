@@ -6,6 +6,7 @@ import androidx.lifecycle.LiveData
 import com.kai.liu.calendar.CalendarSharedPreferences
 import com.kai.liu.calendar.database.Memo
 import com.kai.liu.calendar.database.MemoDatabase
+import com.kai.liu.calendar.database.MemoItem
 import java.util.*
 
 class CalendarViewModel(application: Application): AndroidViewModel(application) {
@@ -49,11 +50,11 @@ class CalendarViewModel(application: Application): AndroidViewModel(application)
         return dateList
     }
 
-    fun setMemo(title: String, memo: String, time: String, location: String) {
-        memoDatabase.setMemo(Memo(getDate(), title, memo, time, location))
+    fun addMemo(title: String, memo: String, time: String, location: String) {
+        memoDatabase.addMemo(getDate(), MemoItem(title, memo, time, location))
     }
 
-    fun getMemo(date: String): LiveData<Memo> {
+    fun getMemo(date: String = getDate()): LiveData<Memo> {
         return memoDatabase.getMemo(date)
     }
 

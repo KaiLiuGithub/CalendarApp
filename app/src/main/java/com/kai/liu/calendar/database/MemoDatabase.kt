@@ -2,14 +2,12 @@ package com.kai.liu.calendar.database
 
 import android.content.Context
 import androidx.lifecycle.LiveData
-import androidx.room.Database
-import androidx.room.Room
-import androidx.room.RoomDatabase
-import androidx.room.TypeConverters
+import androidx.room.*
 import java.util.*
 import kotlin.concurrent.thread
 
 @Database(entities = [(Memo::class)], version = 1)
+@TypeConverters(MemoListConverter::class)
 abstract class MemoDatabase: RoomDatabase() {
 
     companion object {
@@ -32,4 +30,7 @@ abstract class MemoDatabase: RoomDatabase() {
         return memoDao().getMemo(date)
     }
 
+    fun addMemo(date: String, memoItem: MemoItem) {
+        memoDao().addMemo(date, memoItem)
+    }
 }
